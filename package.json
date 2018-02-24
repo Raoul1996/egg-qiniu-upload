@@ -1,9 +1,9 @@
 {
   "name": "egg-qiniu-upload",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "upload file to qiniu plugin for egg-framework, based on qiniu",
   "eggPlugin": {
-    "name": "qiniuUpload"
+    "name": "qiniu"
   },
   "keywords": [
     "egg",
@@ -39,19 +39,21 @@
   "files": [
     "app.js",
     "agent.js",
-    "config"
+    "config",
+    "lib",
+    "utils"
   ],
   "ci": {
     "version": "8, 9"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-qiniu-upload.git"
+    "url": "git+https://github.com/Raoul1996/egg-qiniu-upload.git"
   },
   "bugs": {
     "url": "https://github.com/eggjs/egg/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-qiniu-upload#readme",
+  "homepage": "https://github.com/Raoul1996/egg-qiniu-upload#readme",
   "author": "Raoul1996 <baobaozhou1996@gmail.com>",
   "license": "MIT"
 }

@@ -34,7 +34,7 @@ $ npm i egg-qiniu-upload --save
 
 ```js
 // {app_root}/config/plugin.js
-exports.qiniuUpload = {
+exports.qiniu = {
   enable: true,
   package: 'egg-qiniu-upload',
 };
@@ -44,15 +44,45 @@ exports.qiniuUpload = {
 
 ```js
 // {app_root}/config/config.default.js
-exports.qiniuUpload = {
+exports.qiniu = {
+  // I ussually set the key into `~/.zshrc`, and I can get the value via `process.env.key`, It's very safe~
+  ak: 'your access key',
+  sk: 'your secret key',
+  bucket: 'yout bucket',
+  baseUrl: 'your base url',
+  zone: 'your zone',
 };
 ```
 
-see [config/config.default.js](config/config.default.js) for more detail.
+see [config/config.default.js](config/config.default.js) for more detail, and more detail about qiniu please [see the document](https://developer.qiniu.com/kodo/sdk/1289/nodejs)
 
 ## Example
 
-<!-- example here -->
+### upload file to qiniu and return the url and key
+
+```js
+// {app_root}/app/service/file.js
+async upload2Qiniu(path,realname) {
+  const {app} = this
+
+  // do someting what you want to do........
+
+  return await app.qiniu.upload(path, realname)
+}
+/* return a Objet:
+{key:'your key',url:'your public url'}
+*/
+```
+### get the file info by your file's key
+
+```js
+// {app_root}/app/servcie/file.js
+async info(key) {
+  // your should auth the user's passport.
+  return await this.app.qiniu.info(key);
+}
+```
+### more function ...
 
 ## Questions & Suggestions
 

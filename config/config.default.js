@@ -5,7 +5,7 @@
  * @member Config#qiniuUpload
  * @property {String} SOME_KEY - some description
  */
-exports.qiniuUpload = {
+exports.qiniu = {
   ak: '',
   sk: '',
   bucket: '',
