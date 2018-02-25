@@ -51,6 +51,8 @@ exports.qiniu = {
   bucket: 'yout bucket',
   baseUrl: 'your base url',
   zone: 'your zone',
+  app: true, // default value
+  agent: false, //default value
 };
 ```
 

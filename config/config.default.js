@@ -11,4 +11,6 @@ exports.qiniu = {
   bucket: '',
   baseUrl: '',
   zone: 'Zone_z0',
+  app: true,
+  agent: false,
 };
